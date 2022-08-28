@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body::before {
+    content: "";
+    background: url('/img/bg.png') no-repeat center center/cover;
+    position: absolute;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.myform {
+
+    border-radius: 10px;
+    height: auto;
+    width: 400px;
+    padding: 10px;
+    /* From https://css.glass */
+    background: rgba(77, 73, 73, 0.26);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.8px);
+    -webkit-backdrop-filter: blur(3.8px);
+    border: 1px solid rgba(77, 73, 73, 0.3);
+}
+
+.myform input:not([type='submit']) {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    font-size: 16px;
+    background: transparent;
+    border-radius: 5px;
+    border: 1px solid rgb(52, 70, 88);
+}
+
+.myform input[type='submit'] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(52, 70, 88);
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    margin-top: 10px;
+    
+}
+.myform input[type='submit']:hover{
+    opacity: 0.9;
+    transition: .2s ease-in;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+    padding: 12px;
+    margin-top: 10px;
+    font-size: 16px;
+    background: transparent;
+    border-radius: 5px;
+    border: 1px solid rgb(52, 70, 88);
+}
+.myform h3{
+    text-align: center;
+    color: rgb(52, 70, 88);
+    margin-bottom: 20px;
+
+
+}
+
+label.error{
+    font-size: 14px;   
+    color: red;
+    font-weight: bold;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Mozila */
+input[type = number]{
+    -moz-appearance: textfield;
+}
